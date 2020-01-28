@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Post;
+use App\Category;
 
 class pruebasController extends Controller
 {
@@ -14,5 +16,13 @@ class pruebasController extends Controller
       'titulo' => $titulo
     ));
   }
-    //
+  
+  public function testOrm(){
+    
+    $posts = Post::all();
+    var_dump($posts);
+    
+    die();
+  }
+    
 }
